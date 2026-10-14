@@ -30,8 +30,6 @@ wpscan --url https://example.test --format json | wpscan-view
 wpscan --url https://example.test -e vp,vt --format json | wpscan-view --html reports/scan.html
 ```
 
-Use **comma-separated** choices: `-e vp,vt`, not `-e vp vt`. WPScan's own API and enumeration requirements still apply. The formatter cannot add vulnerability data that WPScan did not supply.
-
 WPScan JSON is produced when its scan finishes, so the report appears at the end, not as a live progress feed. Don't combine its regular console output or stderr with the JSON stream. On older Windows PowerShell, prefer a saved UTF-8 JSON file or the wrapper to avoid native-pipeline encoding conversion.
 
 ## Recommended: preserve scanner exit status
