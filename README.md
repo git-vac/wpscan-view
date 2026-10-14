@@ -26,8 +26,8 @@ The included scans and advisories are **invented fixtures**, not real vulnerabil
 ## Pipe a scan directly
 
 ```bash
-wpscan --url https://your-lab.test --format json | wpscan-view
-wpscan --url https://your-lab.test -e vp,vt --format json | wpscan-view --html reports/lab.html
+wpscan --url https://example.test --format json | wpscan-view
+wpscan --url https://example.test -e vp,vt --format json | wpscan-view --html reports/scan.html
 ```
 
 Use **comma-separated** choices: `-e vp,vt`, not `-e vp vt`. WPScan's own API and enumeration requirements still apply. The formatter cannot add vulnerability data that WPScan did not supply.
@@ -37,7 +37,7 @@ WPScan JSON is produced when its scan finishes, so the report appears at the end
 ## Recommended: preserve scanner exit status
 
 ```bash
-wpscan-view scan --html reports/lab.html -- --url https://your-lab.test -e vp,vt
+wpscan-view scan --html reports/scan.html -- --url https://example.test -e vp,vt
 ```
 
 Arguments before `--` belong to the formatter; arguments after it go directly to WPScan, without a shell. The wrapper adds `--format json`, captures stderr privately, and preserves WPScan's nonzero exit status when its JSON can be read. Output/format options for WPScan are refused in wrapper mode; use the formatter's `--html` / `--json` instead. WPScan itself must be installed separately, normally on Kali/Linux.
@@ -49,7 +49,7 @@ The wrapper does not stream scanner stderr because it can contain sensitive requ
 ```bash
 wpscan-view scans/result.json --html reports/result.html --json reports/normalized.json
 wpscan-view scans/result.json --details --no-color
-wpscan-view scans/older.json --command-line 'wpscan --url https://your-lab.test -e ap,at'
+wpscan-view scans/older.json --command-line 'wpscan --url https://example.test -e ap,at'
 ```
 
 | Output | What you get |

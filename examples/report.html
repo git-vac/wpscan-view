@@ -8,7 +8,7 @@ main{max-width:1150px;margin:auto;padding:40px 24px}h1{font-size:36px;margin:0}h
 .metric strong{font-size:28px;display:block}.warn{border-left:4px solid #fbbf24;padding:12px 18px;background:#292519;margin:10px 0}
 .badge{color:#fda4af}.muted{color:var(--muted)}table{width:100%;border-collapse:collapse}td,th{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-size:12px;text-transform:uppercase}
 .scroll{overflow:auto}a{color:#7dd3fc;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}summary{cursor:pointer;color:var(--accent)}footer{margin-top:36px;color:var(--muted);font-size:13px}
-</style></head><body><main><div class="eyebrow">WORDPRESS · SCAN REVIEW</div><h1>WPScan View</h1><p>https://wordpress.lab.test/</p><section class="grid"><div class="metric"><strong>2</strong>Plugins observed</div><div class="metric"><strong>1</strong>Themes observed</div><div class="metric"><strong>1</strong>Reported advisory entries</div><div class="metric"><strong>0</strong>Coverage warnings</div></section><h2>Scan scope</h2><div class="card"><strong>Enumeration</strong><p>vp — Vulnerable-plugin candidates, vt — Vulnerable-theme candidates, u1-5 — Users</p><p>Scope describes recorded CLI intent. WPScan config files can add or override options.</p></div><h2>Inventory</h2><div class="scroll"><table><thead><tr><th>Type</th><th>Component</th><th>Version</th><th>Latest</th><th>Outdated</th><th>Advisories</th></tr></thead><tbody><tr><td>Plugin</td><td>lab-contact-form</td><td>1.0</td><td>1.2</td><td>Yes</td><td>1</td></tr><tr><td>Plugin</td><td>lab-cache</td><td>Unknown</td><td>2.4</td><td>Unknown</td><td>None listed</td></tr><tr><td>Theme</td><td>lab-theme · Active</td><td>1.2</td><td>1.4</td><td>Yes</td><td>None listed</td></tr><tr><td>WordPress</td><td>WordPress</td><td>6.0-demo</td><td>Unknown</td><td>Yes</td><td>None listed</td></tr></tbody></table></div><h2>Reported advisories</h2><article class="card"><span class="eyebrow">Plugin · lab-contact-form</span><h3>Invented advisory for demonstration only</h3><p>Observed version: 1.0 · Fixed in: 1.1</p><a href="https://example.com/synthetic-advisory" rel="noreferrer">url: https://example.com/synthetic-advisory</a><details><summary>Advisory evidence</summary><pre>{
+</style></head><body><main><div class="eyebrow">WORDPRESS · SCAN REVIEW</div><h1>WPScan View</h1><p>https://wordpress.example.test/</p><section class="grid"><div class="metric"><strong>2</strong>Plugins observed</div><div class="metric"><strong>1</strong>Themes observed</div><div class="metric"><strong>1</strong>Reported advisory entries</div><div class="metric"><strong>0</strong>Coverage warnings</div></section><h2>Scan scope</h2><div class="card"><strong>Enumeration</strong><p>vp — Vulnerable-plugin candidates, vt — Vulnerable-theme candidates, u1-5 — Users</p><p>Scope describes recorded CLI intent. WPScan config files can add or override options.</p></div><h2>Inventory</h2><div class="scroll"><table><thead><tr><th>Type</th><th>Component</th><th>Version</th><th>Latest</th><th>Outdated</th><th>Advisories</th></tr></thead><tbody><tr><td>Plugin</td><td>example-contact-form</td><td>1.0</td><td>1.2</td><td>Yes</td><td>1</td></tr><tr><td>Plugin</td><td>example-cache</td><td>Unknown</td><td>2.4</td><td>Unknown</td><td>None listed</td></tr><tr><td>Theme</td><td>example-theme · Active</td><td>1.2</td><td>1.4</td><td>Yes</td><td>None listed</td></tr><tr><td>WordPress</td><td>WordPress</td><td>6.0-demo</td><td>Unknown</td><td>Yes</td><td>None listed</td></tr></tbody></table></div><h2>Reported advisories</h2><article class="card"><span class="eyebrow">Plugin · example-contact-form</span><h3>Invented advisory for demonstration only</h3><p>Observed version: 1.0 · Fixed in: 1.1</p><a href="https://example.com/synthetic-advisory" rel="noreferrer">url: https://example.com/synthetic-advisory</a><details><summary>Advisory evidence</summary><pre>{
   &quot;title&quot;: &quot;Invented advisory for demonstration only&quot;,
   &quot;fixed_in&quot;: &quot;1.1&quot;,
   &quot;references&quot;: {
@@ -22,22 +22,22 @@ main{max-width:1150px;margin:auto;padding:40px 24px}h1{font-size:36px;margin:0}h
     &quot;found_by&quot;: &quot;Synthetic author entry&quot;,
     &quot;confidence&quot;: 100
   }
-}</pre></details></article><article class="card"><h3>Interesting Findings</h3><div class="scroll"><table><thead><tr><th>Item</th><th>Observation</th><th>Evidence / confidence</th></tr></thead><tbody><tr><td>https://wordpress.lab.test/xmlrpc.php</td><td>XML-RPC endpoint observed (synthetic)</td><td>Synthetic response / 100</td></tr></tbody></table></div><details><summary>Full source evidence</summary><pre>[
+}</pre></details></article><article class="card"><h3>Interesting Findings</h3><div class="scroll"><table><thead><tr><th>Item</th><th>Observation</th><th>Evidence / confidence</th></tr></thead><tbody><tr><td>https://wordpress.example.test/xmlrpc.php</td><td>XML-RPC endpoint observed (synthetic)</td><td>Synthetic response / 100</td></tr></tbody></table></div><details><summary>Full source evidence</summary><pre>[
   {
-    &quot;url&quot;: &quot;https://wordpress.lab.test/xmlrpc.php&quot;,
+    &quot;url&quot;: &quot;https://wordpress.example.test/xmlrpc.php&quot;,
     &quot;to_s&quot;: &quot;XML-RPC endpoint observed (synthetic)&quot;,
     &quot;type&quot;: &quot;xmlrpc&quot;,
     &quot;found_by&quot;: &quot;Synthetic response&quot;,
     &quot;confidence&quot;: 100,
     &quot;interesting_entries&quot;: []
   }
-]</pre></details></article><article class="card"><h3>Config Backups</h3><div class="scroll"><table><thead><tr><th>Item</th><th>Observation</th><th>Evidence / confidence</th></tr></thead><tbody><tr><td>https://wordpress.lab.test/wp-config.php.example</td><td>Observed</td><td>Invented example only / 100</td></tr></tbody></table></div><details><summary>Full source evidence</summary><pre>{
-  &quot;https://wordpress.lab.test/wp-config.php.example&quot;: {
+]</pre></details></article><article class="card"><h3>Config Backups</h3><div class="scroll"><table><thead><tr><th>Item</th><th>Observation</th><th>Evidence / confidence</th></tr></thead><tbody><tr><td>https://wordpress.example.test/wp-config.php.example</td><td>Observed</td><td>Invented example only / 100</td></tr></tbody></table></div><details><summary>Full source evidence</summary><pre>{
+  &quot;https://wordpress.example.test/wp-config.php.example&quot;: {
     &quot;found_by&quot;: &quot;Invented example only&quot;,
     &quot;confidence&quot;: 100
   }
-}</pre></details></article><h2>Detection evidence</h2><details><summary>Plugin · lab-contact-form — full detection evidence</summary><pre>{
-  &quot;location&quot;: &quot;https://wordpress.lab.test/wp-content/plugins/lab-contact-form/&quot;,
+}</pre></details></article><h2>Detection evidence</h2><details><summary>Plugin · example-contact-form — full detection evidence</summary><pre>{
+  &quot;location&quot;: &quot;https://wordpress.example.test/wp-content/plugins/example-contact-form/&quot;,
   &quot;version&quot;: {
     &quot;number&quot;: &quot;1.0&quot;,
     &quot;confidence&quot;: 80,
@@ -57,14 +57,14 @@ main{max-width:1150px;margin:auto;padding:40px 24px}h1{font-size:36px;margin:0}h
       }
     }
   ]
-}</pre></details><details><summary>Plugin · lab-cache — full detection evidence</summary><pre>{
+}</pre></details><details><summary>Plugin · example-cache — full detection evidence</summary><pre>{
   &quot;version&quot;: null,
   &quot;latest_version&quot;: &quot;2.4&quot;,
   &quot;outdated&quot;: null,
   &quot;found_by&quot;: &quot;Synthetic asset URL&quot;,
   &quot;vulnerabilities&quot;: []
-}</pre></details><details><summary>Theme · lab-theme — full detection evidence</summary><pre>{
-  &quot;slug&quot;: &quot;lab-theme&quot;,
+}</pre></details><details><summary>Theme · example-theme — full detection evidence</summary><pre>{
+  &quot;slug&quot;: &quot;example-theme&quot;,
   &quot;version&quot;: {
     &quot;number&quot;: &quot;1.2&quot;,
     &quot;confidence&quot;: 90

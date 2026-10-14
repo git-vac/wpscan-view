@@ -47,7 +47,7 @@ def main(argv=None):
         status = 0
         if args.input == "scan":
             if not forwarded:
-                raise ValueError("Usage: wpscan-view scan [--html report.html] -- --url https://your-lab.test -e vp,vt")
+                raise ValueError("Usage: wpscan-view scan [--html report.html] -- --url https://example.test -e vp,vt")
             if any(a in ("-o", "--output", "-f", "--format") or a.startswith(("--output=", "--format="))
                    or (a.startswith(("-o", "-f")) and not a.startswith("--")) for a in forwarded):
                 raise ValueError("scan mode manages WPScan output/format; remove -o/-f and use --html or --json before '--'.")

@@ -1,8 +1,8 @@
 {
   "banner": {"version": "3.8-example"},
-  "command_line": "wpscan --url https://wordpress.lab.test --enumerate vp,vt,u1-5 --format json",
-  "target_url": "https://wordpress.lab.test/",
-  "effective_url": "https://wordpress.lab.test/",
+  "command_line": "wpscan --url https://wordpress.example.test --enumerate vp,vt,u1-5 --format json",
+  "target_url": "https://wordpress.example.test/",
+  "effective_url": "https://wordpress.example.test/",
   "target_ip": "192.0.2.10",
   "start_time": 1791972000,
   "stop_time": 1791972052,
@@ -10,18 +10,18 @@
   "requests_done": 83,
   "vuln_api": {"plan": "synthetic", "requests_done_during_scan": 4, "requests_remaining": 21},
   "version": {"number": "6.0-demo", "status": "outdated", "found_by": "Synthetic version evidence", "confidence": 80, "vulnerabilities": []},
-  "main_theme": {"slug": "lab-theme", "version": {"number": "1.2", "confidence": 90}, "latest_version": "1.4", "outdated": true, "found_by": "Synthetic stylesheet", "parents": [], "vulnerabilities": []},
+  "main_theme": {"slug": "example-theme", "version": {"number": "1.2", "confidence": 90}, "latest_version": "1.4", "outdated": true, "found_by": "Synthetic stylesheet", "parents": [], "vulnerabilities": []},
   "plugins": {
-    "lab-contact-form": {
-      "location": "https://wordpress.lab.test/wp-content/plugins/lab-contact-form/",
+    "example-contact-form": {
+      "location": "https://wordpress.example.test/wp-content/plugins/example-contact-form/",
       "version": {"number": "1.0", "confidence": 80, "found_by": "Synthetic readme"},
       "latest_version": "1.2", "outdated": true, "found_by": "Synthetic HTML evidence",
       "vulnerabilities": [{"title": "Invented advisory for demonstration only", "fixed_in": "1.1", "references": {"url": ["https://example.com/synthetic-advisory"]}}]
     },
-    "lab-cache": {"version": null, "latest_version": "2.4", "outdated": null, "found_by": "Synthetic asset URL", "vulnerabilities": []}
+    "example-cache": {"version": null, "latest_version": "2.4", "outdated": null, "found_by": "Synthetic asset URL", "vulnerabilities": []}
   },
-  "themes": {"lab-theme": {"version": {"number": "1.2", "confidence": 90}, "latest_version": "1.4", "outdated": true, "found_by": "Synthetic theme enumeration", "vulnerabilities": []}},
+  "themes": {"example-theme": {"version": {"number": "1.2", "confidence": 90}, "latest_version": "1.4", "outdated": true, "found_by": "Synthetic theme enumeration", "vulnerabilities": []}},
   "users": {"alice": {"id": 1, "found_by": "Synthetic author entry", "confidence": 100}},
-  "interesting_findings": [{"url": "https://wordpress.lab.test/xmlrpc.php", "to_s": "XML-RPC endpoint observed (synthetic)", "type": "xmlrpc", "found_by": "Synthetic response", "confidence": 100, "interesting_entries": []}],
-  "config_backups": {"https://wordpress.lab.test/wp-config.php.example": {"found_by": "Invented example only", "confidence": 100}}
+  "interesting_findings": [{"url": "https://wordpress.example.test/xmlrpc.php", "to_s": "XML-RPC endpoint observed (synthetic)", "type": "xmlrpc", "found_by": "Synthetic response", "confidence": 100, "interesting_entries": []}],
+  "config_backups": {"https://wordpress.example.test/wp-config.php.example": {"found_by": "Invented example only", "confidence": 100}}
 }

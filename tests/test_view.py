@@ -20,14 +20,14 @@ class ReportTests(unittest.TestCase):
 
     def test_scope_variants(self):
         for arg in ("-e vp,vt,u1-5", "--enumerate vp,vt,u1-5", "--enumerate=vp,vt,u1-5", "-evp,vt,u1-5"):
-            result = scope("wpscan --url https://lab.test " + arg)
+            result = scope("wpscan --url https://example.test " + arg)
             self.assertEqual([c["code"] for c in result["choices"]], ["vp", "vt", "u1-5"])
         self.assertEqual(scope("wpscan --enumerate --format json")["choices"], [])
         self.assertIn("version", scope("wpscan -e")["evidence"])
         self.assertEqual(scope(None)["kind"], "Unknown")
-        self.assertTrue(scope("wpscan --url https://lab.test")["kind"].startswith("Standard"))
+        self.assertTrue(scope("wpscan --url https://example.test")["kind"].startswith("Standard"))
         self.assertTrue(scope("wpscan -- --enumerate=ap")["kind"].startswith("Standard"))
-        self.assertTrue(scope('wpscan --user-agent "-evp" --url https://lab.test')["kind"].startswith("Standard"))
+        self.assertTrue(scope('wpscan --user-agent "-evp" --url https://example.test')["kind"].startswith("Standard"))
 
     def test_data_gaps_are_not_clean_results(self):
         report = normalize(self.fixture("standard"))
@@ -44,7 +44,7 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(len([c for c in report["components"] if c["kind"] == "Theme"]), 1)
         theme = next(c for c in report["components"] if c["kind"] == "Theme")
         self.assertIn("enumeration_evidence", theme["evidence"])
-        self.assertEqual(report["components"][0]["name"], "lab-contact-form")
+        self.assertEqual(report["components"][0]["name"], "example-contact-form")
 
     def test_hostile_text_and_credentials(self):
         raw = self.fixture()
@@ -52,11 +52,11 @@ class ReportTests(unittest.TestCase):
         raw["effective_url"] = raw["target_url"]
         raw["users"]["alice"]["password"] = "DO-NOT-PRINT"
         raw["command_line"] += " --api-token DO-NOT-PRINT"
-        raw["plugins"]["lab-cache"]["found_by"] = "[red]markup[/red]\x1b[31m\u202etext"
+        raw["plugins"]["example-cache"]["found_by"] = "[red]markup[/red]\x1b[31m\u202etext"
         report = normalize(raw)
         serialized = json.dumps(report)
         self.assertNotIn("DO-NOT-PRINT", serialized)
-        self.assertNotIn("\x1b", clean(raw["plugins"]["lab-cache"]["found_by"]))
+        self.assertNotIn("\x1b", clean(raw["plugins"]["example-cache"]["found_by"]))
         page = webpage(report)
         self.assertNotIn("<script>", page)
         self.assertIn("&lt;script&gt;", page)
@@ -91,7 +91,7 @@ class ReportTests(unittest.TestCase):
             return type("Process", (), {"returncode": 7})()
 
         with patch("wpscan_view.cli.subprocess.run", side_effect=fake_run):
-            self.assertEqual(main(["scan", "--no-color", "--", "--url", "https://lab.test", "-e", "vp,vt"]), 7)
+            self.assertEqual(main(["scan", "--no-color", "--", "--url", "https://example.test", "-e", "vp,vt"]), 7)
 
 
 if __name__ == "__main__":
