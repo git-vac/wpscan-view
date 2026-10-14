@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wpscan-view"
+version = "0.1.0"
+description = "Readable terminal and HTML views of WPScan JSON, with scan-scope evidence."
+requires-python = ">=3.10"
+dependencies = ["rich>=13.7,<16"]
+license = "MIT"
+
+[project.scripts]
+wpscan-view = "wpscan_view.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

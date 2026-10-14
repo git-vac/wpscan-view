@@ -1,0 +1,42 @@
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ WPScan View                                                                                                          │
+│ https://wordpress.lab.test/                                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Scan: Enumeration
+  vp  Vulnerable-plugin candidates
+  vt  Vulnerable-theme candidates
+  u1-5  Users
+Scope describes recorded CLI intent. WPScan config files can add or override options.
+                                         Inventory • reported advisories first                                          
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Type        ┃ Component          ┃ Version   ┃ Latest   ┃ Advisories   ┃ Evidence                                    ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Plugin      │ lab-contact-form   │ 1.0       │ 1.2      │ 1            │ Synthetic HTML evidence · Outdated          │
+│ Plugin      │ lab-cache          │ Unknown   │ 2.4      │ None listed  │ Synthetic asset URL                         │
+│ Theme       │ lab-theme          │ 1.2       │ 1.4      │ None listed  │ Active · Synthetic stylesheet · Outdated    │
+│ WordPress   │ WordPress          │ 6.0-demo  │ Unknown  │ None listed  │ Synthetic version evidence · Outdated       │
+└─────────────┴────────────────────┴───────────┴──────────┴──────────────┴─────────────────────────────────────────────┘
+
+lab-contact-form — reported advisories
+  • Invented advisory for demonstration only
+    Fixed in: 1.1
+    url: https://example.com/synthetic-advisory
+                                                         Users                                                          
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Item            ┃ Observation                  ┃ Source / confidence                                                 ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ alice           │ User ID: 1                   │ Synthetic author entry / 100                                        │
+└─────────────────┴──────────────────────────────┴─────────────────────────────────────────────────────────────────────┘
+                                                  Interesting Findings                                                  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Item                                       ┃ Observation                                ┃ Source / confidence        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ https://wordpress.lab.test/xmlrpc.php      │ XML-RPC endpoint observed (synthetic)      │ Synthetic response / 100   │
+└────────────────────────────────────────────┴────────────────────────────────────────────┴────────────────────────────┘
+                                                     Config Backups                                                     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Item                                                           ┃ Observation     ┃ Source / confidence               ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ https://wordpress.lab.test/wp-config.php.example               │ Observed        │ Invented example only / 100       │
+└────────────────────────────────────────────────────────────────┴─────────────────┴───────────────────────────────────┘
+Reported advisories are WPScan observations, not proof of exploitability. None listed ≠ secure.

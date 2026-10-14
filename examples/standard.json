@@ -1,0 +1,9 @@
+{
+  "command_line": "wpscan --url https://wordpress.lab.test --format json",
+  "target_url": "https://wordpress.lab.test/",
+  "start_time": 1791972000, "stop_time": 1791972010, "elapsed": 10,
+  "vuln_api": {"error": "No API token supplied; vulnerability data unavailable (synthetic)"},
+  "version": {"number": "6.0-demo", "found_by": "Synthetic generator tag", "confidence": 60, "vulnerabilities": []},
+  "main_theme": {"slug": "lab-theme", "version": null, "found_by": "Synthetic stylesheet", "vulnerabilities": [], "parents": []},
+  "interesting_findings": []
+}
